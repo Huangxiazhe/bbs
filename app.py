@@ -25,7 +25,7 @@ def configured_app():
     # 这个字符串随便你设置什么内容都可以
     app.secret_key = secret.secret_key
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:{}@localhost/web21?charset=utf8mb4'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:{}@localhost/bbs?charset=utf8mb4'.format(
         secret.database_password
     )
     db.init_app(app)
