@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body class="EntrySign-body">
+<div id="root">
+    <div data-zop-usertoken="{}" data-reactroot="">
+        <div class="LoadingBar"></div>
+        <main role="main" class="App-main">
+            <div class="SignFlowHomepage">
+                <div class="SignFlowHomepage-content">
+                    <div class="Card SignContainer-content">
+                        <div class="SignFlowHeader" style="padding-bottom:5px">
+                            <div class="SignFlowHeader-slogen">SEIZE THE DAY, NOW</div>
+                        </div>
+                        <div class="SignContainer-inner">
+                            <div class="Login-content">
+                                <form novalidate="" class="SignFlow" method="post" action="{{ url_for('user.login') }}">
+                                    <div class="SignFlow-account">
+                                        <div class="SignFlow-supportedCountriesSelectContainer"></div>
+                                        <div class="SignFlowInput SignFlow-accountInputContainer">
+                                            <div class="SignFlow-accountInput Input-wrapper"><input type="text" value=""
+                                                                                                    name="username"
+                                                                                                    class="Input"
+                                                                                                    placeholder="用户名">
+                                            </div>
+                                            <div class="SignFlowInput-errorMask SignFlowInput-requiredErrorMask SignFlowInput-errorMask--hidden"></div>
+                                        </div>
+                                    </div>
+                                    <div class="SignFlow-password">
+                                        <div class="SignFlowInput">
+                                            <div class="Input-wrapper"><input type="password" value="" name="password"
+                                                                              class="Input" placeholder="密码"></div>
+                                            <div class="SignFlowInput-errorMask SignFlowInput-requiredErrorMask SignFlowInput-errorMask--hidden"></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                            class="Button SignFlow-submitButton Button--primary Button--blue">登录
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="SignContainer-switch">没有帐号？<a href="{{ url_for('user.register_view') }}">注册</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

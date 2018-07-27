@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}bbs club{% endblock%}
+{% block main %}
+
+<span>发件人 :</span>
+<a href="{{ url_for('user.detail', id = mail.sender_id) }}"> {{ mail.sender().username }}</a>
+<br>
+<span>收件人 :</span>
+<a href="{{ url_for('user.detail', id = mail.receiver_id) }}"> {{ mail.receiver().username }}</a>
+<p>内容 :</p>
+<p>{{ mail.content }}</p>
+{% endblock %}

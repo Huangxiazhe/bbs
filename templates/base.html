@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.min.css">
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <head>
+<body>
+
+<!-- navbar -->
+<div class='navbar'>
+    <div class='navbar-inner'>
+        <div class='container'>
+            <a class="brand" href="{{ url_for('index.index') }}">SEIZER</a>
+            <ul class='nav pull-right'>
+                <li><a href="{{ url_for('index.index') }}">首页</a></li>
+                <li><a href="{{ url_for('message.index') }}">邮件</a></li>
+                <li><a href="{{ url_for('user.setting') }}">设置</a></li>
+                <li><a href="{{ url_for('user.register_view') }}">注册</a></li>
+                <li><a href="{{ url_for('user.login_view') }}">登录</a></li>
+
+            </ul>
+            <a class="btn btn-navbar" id="responsive-sidebar-trigger">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% block main %}
+{% endblock %}
+
+</body>
